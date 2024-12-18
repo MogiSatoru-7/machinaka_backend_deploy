@@ -1,0 +1,4 @@
+# Python (backend)関連
+venv/
+*.pyc
+__pycache__/
