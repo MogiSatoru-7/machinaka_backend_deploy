@@ -35,4 +35,4 @@ tzdata==2024.2
 uvicorn==0.23.1
 watchfiles==0.24.0
 websockets==14.1
-gunicorn==21.2.0 #ケントさん
+gunicorn==21.2.0

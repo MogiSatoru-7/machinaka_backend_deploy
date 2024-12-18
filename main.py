@@ -1,6 +1,7 @@
 # main.py
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
+from sqlalchemy import text
 from models import User
 from database import test_connection, engine
 from auth import login, get_current_user  # auth.pyからインポート
