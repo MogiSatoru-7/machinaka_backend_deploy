@@ -18,7 +18,7 @@ class OfficeBase(BaseModel):
 class Office(OfficeBase):
     office_id: int
     class Config:
-        orm_mode = True
+        from_attributes = True  # orm_mode を置き換え
 
 
 class ProjectBase(BaseModel):
@@ -32,7 +32,7 @@ class Project(ProjectBase):
     user_id: int
     project_image_url: Optional[str]  # この行が必要
     class Config:
-        orm_mode = True
+        from_attributes = True  # orm_mode を置き換え
 
 
 class SkillBase(BaseModel):
@@ -44,7 +44,7 @@ class Skill(SkillBase):
     skill_id: int
     user_id: int
     class Config:
-        orm_mode = True
+        from_attributes = True  # orm_mode を置き換え
 
 
 class JobTitleBase(BaseModel):
@@ -54,7 +54,7 @@ class JobTitleBase(BaseModel):
 class JobTitle(JobTitleBase):
     job_id: int
     class Config:
-        orm_mode = True
+        from_attributes = True  # orm_mode を置き換え
 
 
 class IndustryBase(BaseModel):
@@ -64,7 +64,7 @@ class IndustryBase(BaseModel):
 class Industry(IndustryBase):
     industry_id: int
     class Config:
-        orm_mode = True
+        from_attributes = True  # orm_mode を置き換え
 
 
 class UserBase(BaseModel):
@@ -80,4 +80,4 @@ class User(UserBase):
     projects: List[Project] = []
     skills: List[Skill] = []
     class Config:
-        orm_mode = True
+        from_attributes = True  # orm_mode を置き換え

@@ -7,6 +7,7 @@ from database import test_connection, engine
 from auth import login, get_current_user  # auth.pyからインポート
 # 各ルーターをインポート
 from routers import offices, users, projects, skills, industries, job_titles
+from match import match_router
 
 app = FastAPI()
 
@@ -49,6 +50,9 @@ app.include_router(projects.router, prefix="/api", tags=["projects"])
 app.include_router(skills.router, prefix="/api", tags=["skills"])
 app.include_router(industries.router, prefix="/api", tags=["industries"])
 app.include_router(job_titles.router, prefix="/api", tags=["job_titles"])
+
+# マッチングのルーターを登録
+app.include_router(match_router, prefix="/api", tags=["match"])
 
 # ルートエンドポイント
 @app.get("/")
