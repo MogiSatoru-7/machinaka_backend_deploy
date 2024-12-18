@@ -1,8 +1,6 @@
 # schemas.py
-
 from pydantic import BaseModel
 from typing import List, Optional
-
 
 class OfficeBase(BaseModel):
     office_name: str
